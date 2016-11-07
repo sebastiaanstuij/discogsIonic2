@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { UsersPage } from '../pages/users/users';
+import { SearchPage } from '../pages/search/search';
 import {UserDetailsPage } from '../pages/user-details/user-details';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
 
-import { GithubUsers } from '../providers/github-users';
+import { DiscogsAPI } from '../providers/discogsAPI';
 
 @NgModule({
   declarations: [
     MyApp,
-    UsersPage,
+    SearchPage,
     UserDetailsPage,
     ReposPage,
     OrganisationsPage
@@ -23,11 +23,11 @@ import { GithubUsers } from '../providers/github-users';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    UsersPage,
+    SearchPage,
     UserDetailsPage,
     ReposPage,
     OrganisationsPage
   ],
-  providers: [GithubUsers]
+  providers: [DiscogsAPI]
 })
 export class AppModule {}

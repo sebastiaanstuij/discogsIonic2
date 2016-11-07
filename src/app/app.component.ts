@@ -4,7 +4,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StatusBar } from 'ionic-native';
 
-import { UsersPage } from '../pages/users/users';
+import { SearchPage } from '../pages/search/search';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganisationsPage } from '../pages/organisations/organisations';
 
@@ -15,7 +15,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make UsersPage the root (or first) page
-  rootPage: any = UsersPage;
+  rootPage: any = SearchPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform,  public menu: MenuController) {
@@ -23,7 +23,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Users', component: UsersPage },
+      { title: 'Search', component: SearchPage },
       { title: 'Repos', component: ReposPage },
       { title: 'Organisations', component: OrganisationsPage },
     ];
